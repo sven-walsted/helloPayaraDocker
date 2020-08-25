@@ -1,2 +1,9 @@
 # helloPayaraDocker
-Started Java EE 8 application on Payara and Docker
+Starter Java EE 8 application on Payara and Docker
+
+# Build
+mvn clean package
+
+# RUN
+
+Execute: deployOnDocker.sh
