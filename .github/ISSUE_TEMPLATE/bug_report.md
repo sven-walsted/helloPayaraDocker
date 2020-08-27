@@ -11,14 +11,17 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Steps to reproduce the behavior as GIVEN-WHEN-THEN (GWT):
+ - GIVEN:
+     -  Go to '...'
+     - Click on '....'
+ - WHEN
+    - Scroll down to '....'
+ - THEN
+    - See error
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+A clear and concise description of what you expected to happen. Use GWT format.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
