@@ -16,5 +16,15 @@ A clear and concise description of what you want to happen.
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
 
+**Expected behavior**
+A clear and concise description of what you expected to happen as GIVEN-WHEN-THEN (GWT)
+ - GIVEN:
+     - Go to '...'
+     - Click on '....'
+ - WHEN
+    - Scroll down to '....'
+ - THEN
+    - See '....'
+    
 **Additional context**
 Add any other context or screenshots about the feature request here.
