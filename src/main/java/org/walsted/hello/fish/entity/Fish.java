@@ -36,6 +36,7 @@ public class Fish {
 		this.id = id;
 	}
 
+	@Column(name = "class_name")
 	public String getClassName() {
 		return className;
 	}
