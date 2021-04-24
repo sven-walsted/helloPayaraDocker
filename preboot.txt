@@ -1,0 +1,1 @@
+# create-file-user --passwordfile /tmp/pwdfile.txt --groups=a --target=default-config --authrealmname=file test

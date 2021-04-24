@@ -22,7 +22,10 @@ rm -Rf $DOCKER_DIR
 mkdir -p $DEPLOY_DIR
 mkdir -p $SCRIPTS_DIR
 cp ./target/Hello.war          $DEPLOY_DIR
+cp pwdfile.txt                 $SCRIPTS_DIR
+cp preboot.txt                 $SCRIPTS_DIR
+cp postboot.txt                $SCRIPTS_DIR
 docker stop $INSTANCE_NAME || true
 docker rm   $INSTANCE_NAME || true
-docker run --name $INSTANCE_NAME --rm -d $PORTS -v $DEPLOY_DIR:/opt/payara/deployments $IMAGE_NAME
+docker run --name $INSTANCE_NAME --rm -d $PORTS -v $DEPLOY_DIR:/opt/payara/deployments -v $SCRIPTS_DIR:/tmp -e PREBOOT_COMMANDS=/tmp/preboot.txt -e POSTBOOT_COMMANDS=/tmp/postboot.txt $IMAGE_NAME
 

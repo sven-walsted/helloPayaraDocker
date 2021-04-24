@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+	<display-name>Hello Payara / Java EE 8</display-name>
+
+	<session-config>
+		<session-timeout>
+			30
+		</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- UNAUTHORIZED 401 -->
+	<error-page>
+		<error-code>401</error-code>
+		<location>/WEB-INF/jsp/errors/401.html</location>
+	</error-page>
+	<!-- FORBIDDEN -->
+	<error-page>
+		<error-code>403</error-code>
+		<location>/WEB-INF/jsp/errors/403.html</location>
+	</error-page>
+	<!-- NOT FOUND -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsp/errors/404.html</location>
+	</error-page>
+	<!-- METHOD NOT ALLOWED -->
+	<error-page>
+		<error-code>405</error-code>
+		<location>/WEB-INF/jsp/errors/405.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/jsp/errors/exception.jsp</location>
+	</error-page>
+
+    <!-- Enable by un-commenting here and 
+         @RolesAllowed("a") in FishResource
+    -->
+<!--
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>file2</realm-name>
+	</login-config>
+
+	<security-role>
+		<role-name>a</role-name>
+	</security-role>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Sample System</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>a</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>NONE</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+-->
+</web-app>

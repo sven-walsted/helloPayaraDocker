@@ -3,6 +3,7 @@ package org.walsted.hello.fish.boundary;
 import java.net.URI;
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -64,6 +65,7 @@ public class FishResource {
 
 	@DELETE
 	@Path("/{id}")
+	// @RolesAllowed("a")
 	public Response deleteById(@PathParam("id") long id) {
 		try {
 			service.delete(id);

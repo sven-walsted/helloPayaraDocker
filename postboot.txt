@@ -1,0 +1,3 @@
+# Enables/Disables access to admin console
+# enable-secure-admin
+create-jdbc-resource --connectionpoolid H2Pool jdbc/__h2

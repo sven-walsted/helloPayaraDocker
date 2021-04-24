@@ -27,7 +27,21 @@ Summary
 
 # RESTful API
 
-`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"Hucho\",\"speciesName\":\"taimen\",\"commonName\":\"Siberian taimen\"}" http://localhost:8080/Hello/resources/fish`
+`TARGETHOST=https://dev1.walsted.org`
+
+`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"Hucho\",\"speciesName\":\"taimen\",\"commonName\":\"Siberian taimen\"}" $TARGETHOST/Hello/resources/fish`
+
+`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"oncorhynchus\",\"speciesName\":\"tshawytscha\",\"commonName\":\"King salmon\"}" $TARGETHOST/Hello/resources/fish`
+
+`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"oncorhynchus\",\"speciesName\":\"keta\",\"commonName\":\"Chum salmon\"}" $TARGETHOST/Hello/resources/fish`
+
+`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"oncorhynchus\",\"speciesName\":\"kusutch\",\"commonName\":\"Coho salmon\"}" $TARGETHOST/Hello/resources/fish`
+
+`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"oncorhynchus\",\"speciesName\":\"nerka\",\"commonName\":\"Red salmon\"}" $TARGETHOST/Hello/resources/fish`
+
+`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"oncorhynchus\",\"speciesName\":\"gorbuscha\",\"commonName\":\"Pink salmon\"}" $TARGETHOST/Hello/resources/fish`
+
+`curl -XPOST -H "Content-type: application/json" -d "{\"className\":\"Actinopterygii\",\"orderName\":\"Salmoniformes\",\"familyName\":\"Salmoninae\",\"genusName\":\"oncorhynchus\",\"speciesName\":\"masou\",\"commonName\":\"Cherry salmon\"}" $TARGETHOST/Hello/resources/fish`
 
 `curl -i -XGET http://localhost:8080/Hello/resources/fish/`
 

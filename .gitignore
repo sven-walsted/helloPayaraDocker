@@ -10,6 +10,9 @@
 # Emacs
 *~
 
+# React
+node_modules/
+
 # Eclipse
 .classpath
 .project
